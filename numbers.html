@@ -1,0 +1,24 @@
+<script>
+    function numbers(arr){
+        var newArr=[];
+        for(var x=0; x<arr.length; x++){
+            if(typeof arr[x] === "number"){
+                newArr.push(arr[x]);
+            }
+        }
+        console.log(newArr);
+    }
+
+    numbers([1, 6, true, "hello", 69]);
+
+    function numbersOnly(arr){
+        for(var x=arr.length-1; x>=0; x--){
+            if(typeof arr[x] !== "number"){
+                arr.splice(x, 1);
+            }
+        }
+        console.log(arr);
+    }
+
+    numbersOnly([false, 43, "hello", 82, 78, "hi", "help", 2, 4, 6, "no", "no", "no"]);
+</script>
